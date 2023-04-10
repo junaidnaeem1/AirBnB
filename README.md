@@ -2,7 +2,7 @@
 
 ## Database Schema Design
 
-`<insert database schema design here>`
+![Alt text](/database_schema.png)
 
 ## API Documentation
 
