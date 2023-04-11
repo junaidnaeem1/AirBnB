@@ -336,7 +336,7 @@ Returns the details of a spot specified by its id.
 * Require Authentication: false
 * Request
   * Method: GET
-  * URL: 'spots/:spotid'
+  * URL: '/spots/:spotid'
   * Body: none
 
 * Successful Response
