@@ -11,34 +11,26 @@ module.exports = {
     options.tableName = 'Spots';
     return queryInterface.bulkInsert(options, [
       {
-        firstName: 'Junaid',
-        lastName: 'NAEEM',
-        email: 'demo@user.io',
-        username: 'Demo-lition',
-        hashedPassword: bcrypt.hashSync('password')
-      },
-      {
-        firstName: 'Junaid',
-        lastName: 'NAEEM',
-        email: 'user1@user.io',
-        username: 'FakeUser1',
-        hashedPassword: bcrypt.hashSync('password2')
-      },
-      {
-        firstName: 'Junaid',
-        lastName: 'NAEEM',
-        email: 'user2@user.io',
-        username: 'FakeUser2',
-        hashedPassword: bcrypt.hashSync('password3')
+        ownerId: 1,
+        name: 'Jacob',
+        address: '12 First Street',
+        city: 'Teaneck',
+        state: 'New Jersey',
+        country: 'USA',
+        latitude: 1.2345,
+        longitude: 2.34156,
+        description: 'Great Place',
+        price: 20,
+
       }
     ], {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    options.tableName = 'Users';
+    options.tableName = 'Spots';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      username: { [Op.in]: ['Demo-lition', 'FakeUser1', 'FakeUser2'] }
+      ownerId: { [Op.in]: [1] }
     }, {});
   }
 };
