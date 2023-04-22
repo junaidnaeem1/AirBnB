@@ -11,6 +11,10 @@
     "start": "npm start --prefix backend",
     "build": "npm run --prefix backend build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junaidnaeem1/AirBnB"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
